@@ -1860,7 +1860,8 @@ static void CG_DrawDisconnect( void ) {
 	x = 640 - 72;
 	y = 480 - 52;
 
-	CG_DrawPic( x, y, 48, 48, trap_R_RegisterShader( "gfx/2d/net.tga" ) );
+	if (cg_drawCI.integer)
+		CG_DrawPic( x, y, 48, 48, trap_R_RegisterShader( "gfx/2d/net.tga" ) );
 }
 
 
