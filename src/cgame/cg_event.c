@@ -85,7 +85,11 @@ const char  *CG_PlaceString( int rank ) {
 ID_INLINE void CG_ColorObituaryEntName(clientInfo_t* ci, char* name, qboolean teamKill)
 {
 	clientInfo_t* self = &cgs.clientinfo[cg.clientNum];
-	Q_CleanStr(name);
+
+	char cleanName[MAX_NETNAME];
+	BG_cleanName(name, cleanName, MAX_NETNAME, qfalse);
+	Q_strncpyz(name, cleanName, sizeof(cleanName));
+
 	memmove(name + 2, name, strlen(name) + 1);
 	name[0] = '^';
 
