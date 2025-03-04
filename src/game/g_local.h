@@ -1773,6 +1773,7 @@ extern vmCvar_t	g_ssWaitTime;
 extern vmCvar_t	g_broadcastClients;
 extern vmCvar_t g_logConfigStringChanges;
 extern vmCvar_t g_playPauseMusic;
+extern vmCvar_t g_allowReadyTeam;
 
 // unlagged
 extern vmCvar_t	g_delagHitscan;
